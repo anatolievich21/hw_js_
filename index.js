@@ -1,3 +1,6 @@
+/////////////
+// task #1 //
+/////////////
 let randomArray = new Array(100);
 
 for (let i = 0; i < randomArray.length; i++){
@@ -19,3 +22,36 @@ let filteredArray = valueGreaterThan50(sortedArray);
 
 
 console.log(filteredArray);
+
+/////////////
+// task #2 //
+/////////////
+let myArray = new Array(100);
+
+function getRandomString() {
+    let letters = 'abcdefghijklmnopqrstuvwxyz';
+    let randomString = '';
+    for (let i = 0; i < 5; i++) {
+        randomString += letters.charAt(Math.floor(Math.random() * letters.length));
+    }
+    return randomString;
+}
+
+for (let i = 0; i < myArray.length; i++) {
+    myArray[i] = getRandomString();
+}
+
+
+function sortAscending(arr) {
+    return arr.slice().sort();
+}
+
+let sortedArrayTwo = sortAscending(myArray);
+
+function transformToObject(arr) {
+    return arr.map(element => {
+        return {value: element};
+    });
+}
+
+let transformedArray = transformToObject(myArray);;
