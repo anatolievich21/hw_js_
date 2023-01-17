@@ -2,15 +2,15 @@
 // task #1 //
 /////////////
 
-let randomArray = new Array(100);
+const randomArray = new Array(100);
 
 
-for (let i = 0; i < randomArray.length; i++)
+for (let i = 0; i < randomArray.length; i++){
     randomArray[i] = Math.floor(Math.random() * 101); 
-} 
+}
 
 function sortByHeight(array) { 
-    let sortedArray = array.slice().sort((a, b) => a - b);
+    let sortedArray = [...array].sort((a, b) => a - b);
     return sortedArray;
 }
 
@@ -20,15 +20,16 @@ function valueGreaterThan50(array) {
 }
 
 let sortedArray = sortByHeight(randomArray);
-let filteredArray = valueGreaterThan50(sortedArray);//
+let filteredArray = valueGreaterThan50(sortedArray);
 
 
-console.log(filteredArray);
+console.log(sortedArray);
 
 /////////////
 // task #2 //
-///////////////створюємо масив довжиною 100 пустих елементів
+/////////////
 
+const myArray = new Array(100);
 
 const randomString = () => {
     let letters = 'abcdefghijklmnopqrstuvwxyz';
@@ -62,4 +63,6 @@ console.log(sortedArrayTwo);
 console.log(transformedArray);
 
 
-
+/////////////
+// task #3 //
+/////////////
